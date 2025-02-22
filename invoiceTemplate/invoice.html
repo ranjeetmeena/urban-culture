@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .invoice-container {
+            background-color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header, .footer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .footer p {
+            font-size: 0.8em;
+            color: #666;
+        }
+        table {
+            width: 100%;
+            margin-bottom: 30px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .invoice-details {
+            margin-bottom: 30px;
+        }
+        .invoice-details .field {
+            margin-bottom: 10px;
+        }
+        .field label {
+            font-weight: bold;
+        }
+        .field span {
+            margin-left: 10px;
+        }
+     
+    </style>
+</head>
+<body>
+
+<div class="invoice-container">
+    <div class="header">
+        <h1>GST Invoice</h1>
+        <!-- <p>Invoice issued by XYZ Company</p> -->
+    </div>
+
+    <div class="invoice-details">
+        <div class="field">
+            <label for="name">Name:</label>
+            <span id="name">{{bookingName}}</span>
+        </div>
+        <div class="field">
+            <label for="invoiceNumber">Invoice Number:</label>
+            <span id="invoiceNumber">{{invoiceNumber}}</span>
+        </div>
+        <div class="field">
+            <label for="createdAt">Created At:</label>
+            <span id="createdAt">{{invoiceDate}}</span>
+        </div>
+        <div class="field">
+            <label for="status">Status:</label>
+            <span id="status">{{bookingStatus}}</span>
+        </span>
+
+        </div>
+        <div class="field">
+            <label for="gstStatus">GST Status:</label>
+            <span id="gstStatus">{{gstStatus}}</span>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Total Amount (Excluding GST)</td>
+                <td id="totalAmount">₹{{bookingAmount}}</td>
+            </tr>
+            <tr>
+                <td>GST Amount (18%)</td>
+                <td id="gstAmount">₹{{gstAmount}}</td>
+            </tr>
+            <tr>
+                <td><strong>Total Amount (Including GST)</strong></td>
+                <td id="totalAmountWithGST"><strong>₹{{totalAmountWithGST}}</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p>Urban Culture | Contact: info@urbanculture.com</p>
+    </div>
+</div>
+
+</body>
+</html>

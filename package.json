@@ -1,0 +1,23 @@
+{
+  "name": "new-folder-(4)",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "html-pdf": "^3.0.1",
+    "joi": "^17.13.3",
+    "mongoose": "^8.10.1",
+    "nodemon": "^3.1.9",
+    "pdfkit": "^0.16.0",
+    "pdfmake": "^0.2.18"
+  }
+}
